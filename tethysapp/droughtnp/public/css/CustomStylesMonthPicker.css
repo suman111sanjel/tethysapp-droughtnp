@@ -1,0 +1,31 @@
+.ui-widget-content {
+    background: #fff !important;
+}
+
+
+a.ui-button.ui-corner-all.ui-widget.ui-state-active {
+    border: 2px solid #aaaaaa /*{borderColorActive}*/;
+    background: #ffffff /*{bgColorActive}*/;
+    font-weight: normal /*{fwDefault}*/;
+    color: #212121 /*{fcActive}*/;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: 1px solid #dad55e;
+    background: #ffffff;
+    color: #777620;
+}
+
+.ui-widget-content .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-content a.ui-button:active, .ui-widget-content .ui-button:active, .ui-widget-content .ui-button.ui-state-active:hover {
+    background: #ffffff;
+    border: 1px solid #cec0c1;
+}
+
+.ui-widget-content .ui-icon {
+    margin-left: -.40em;
+    margin-top: -.55em;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    background: none;
+}

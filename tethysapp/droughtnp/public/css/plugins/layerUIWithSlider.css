@@ -1,0 +1,115 @@
+.layerCollection {
+    padding: 0px 14px 14px 14px;
+}
+
+.LayerDiv {
+    margin-top: 18px;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.12), 2px -2px 6px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.12), 2px -2px 6px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.12), 2px -2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.paddingForDiv {
+    padding-left: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.legend-div {
+    margin-top: 10px;
+    border-top: 1px solid #cecbcb;
+    padding-left: 10px;
+}
+
+.opac-div {
+    height: 10px;
+}
+
+.layerCheckPadding {
+    padding-top: 10px;
+}
+
+.ChevronDiv .glyphicon {
+    margin-right: 10px;
+    cursor: pointer;
+    margin-top: 11px;
+    transition: 0.3s transform;
+}
+
+.ChevronDiv .glyphicon[show-legend="false"] {
+    transform: rotate(0deg);
+}
+
+.ChevronDiv .glyphicon[show-legend="true"] {
+    transform: rotate(-90deg);
+}
+
+
+/*slider*/
+.slider-selection {
+    color: #2c689c;
+    background: #2c689c;
+    background-color: #2c689c;
+}
+
+.slider-track-high {
+    background: #dddddd;
+    background-color: #dddddd;
+    color: #dddddd;
+}
+
+.bs-tooltip-auto[x-placement^=top], .bs-tooltip-top {
+    padding: .4rem 10px;
+}
+
+
+.tooltip-inner {
+    color: #ffffff;
+    background-color: #0000;
+}
+
+.slider .tooltip.bs-tooltip-top {
+    padding-top: 1px;
+    margin-top: -13px;
+    margin-left: 0px;
+    font-size: 10px;
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+    border-top-color: #0000;
+}
+
+.bs-tooltip-auto[x-placement^=top], .bs-tooltip-top {
+    padding: .4rem 10px;
+}
+
+.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle {
+    margin-left: -8px;
+    margin-top: 0px;
+}
+
+.slider-handle.round {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.slider-handle {
+    width: 36px;
+    height: 15px;
+}
+
+.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle {
+    margin-left: -8px;
+    margin-top: -9px;
+}
+
+.slider.slider-horizontal .slider-track {
+    height: 4px;
+    margin-top: -4px;
+}
+
+.opac-div {
+    margin-right: 20px;
+}

@@ -1,0 +1,42 @@
+2021-01-17 10:25:59,207 - Raised an error => (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "aeronet_aod_data_list_pkey"
+DETAIL:  Key (st_id, date_time)=(4, 2021-01-16 01:31:36) already exists.
+
+[SQL: INSERT INTO public.aeronet_aod_data_list (st_id, date_time, value, type) VALUES (%(st_id)s, %(date_time)s, %(value)s, %(type)s)]
+[parameters: {'st_id': 4, 'date_time': datetime.datetime(2021, 1, 16, 1, 31, 36), 'value': 0.703172, 'type': 'aod'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+2021-01-17 10:25:59,216 - Raised an error => (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "aeronet_aod_data_list_pkey"
+DETAIL:  Key (st_id, date_time)=(4, 2021-01-16 01:41:13) already exists.
+
+[SQL: INSERT INTO public.aeronet_aod_data_list (st_id, date_time, value, type) VALUES (%(st_id)s, %(date_time)s, %(value)s, %(type)s)]
+[parameters: {'st_id': 4, 'date_time': datetime.datetime(2021, 1, 16, 1, 41, 13), 'value': 0.686098, 'type': 'aod'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+2021-01-17 10:25:59,221 - Raised an error => (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "aeronet_aod_data_list_pkey"
+DETAIL:  Key (st_id, date_time)=(4, 2021-01-16 01:43:07) already exists.
+
+[SQL: INSERT INTO public.aeronet_aod_data_list (st_id, date_time, value, type) VALUES (%(st_id)s, %(date_time)s, %(value)s, %(type)s)]
+[parameters: {'st_id': 4, 'date_time': datetime.datetime(2021, 1, 16, 1, 43, 7), 'value': 0.689063, 'type': 'aod'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+2021-01-17 10:25:59,227 - Raised an error => (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "aeronet_aod_data_list_pkey"
+DETAIL:  Key (st_id, date_time)=(4, 2021-01-16 01:45:03) already exists.
+
+[SQL: INSERT INTO public.aeronet_aod_data_list (st_id, date_time, value, type) VALUES (%(st_id)s, %(date_time)s, %(value)s, %(type)s)]
+[parameters: {'st_id': 4, 'date_time': datetime.datetime(2021, 1, 16, 1, 45, 3), 'value': 0.687322, 'type': 'aod'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+2021-01-17 10:25:59,234 - Raised an error => (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "aeronet_aod_data_list_pkey"
+DETAIL:  Key (st_id, date_time)=(4, 2021-01-16 01:50:32) already exists.
+
+[SQL: INSERT INTO public.aeronet_aod_data_list (st_id, date_time, value, type) VALUES (%(st_id)s, %(date_time)s, %(value)s, %(type)s)]
+[parameters: {'st_id': 4, 'date_time': datetime.datetime(2021, 1, 16, 1, 50, 32), 'value': 0.698248, 'type': 'aod'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+2021-01-17 10:25:59,239 - Raised an error => (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "aeronet_aod_data_list_pkey"
+DETAIL:  Key (st_id, date_time)=(4, 2021-01-16 01:55:35) already exists.
+
+[SQL: INSERT INTO public.aeronet_aod_data_list (st_id, date_time, value, type) VALUES (%(st_id)s, %(date_time)s, %(value)s, %(type)s)]
+[parameters: {'st_id': 4, 'date_time': datetime.datetime(2021, 1, 16, 1, 55, 35), 'value': 0.692751, 'type': 'aod'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+2021-01-17 10:25:59,245 - Raised an error => (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "aeronet_aod_data_list_pkey"
+DETAIL:  Key (st_id, date_time)=(4, 2021-01-16 01:57:29) already exists.
+
+[SQL: INSERT INTO public.aeronet_aod_data_list (st_id, date_time, value, type) VALUES (%(st_id)s, %(date_time)s, %(value)s, %(type)s)]
+[parameters: {'st_id': 4, 'date_time': datetime.datetime(2021, 1, 16, 1, 57, 29), 'value': 0.68528, 'type': 'aod'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
