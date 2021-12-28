@@ -1,0 +1,176 @@
+<!doctype html>
+
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>National agricultural drought watch - {{ CountryName }} -
+        {% block PageTitleTabName %} {% endblock %} </title>
+    <link href="/static/{{ TethysAppName }}/css/plugins/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/static/{{ TethysAppName }}/css/plugins/ol.css" rel="stylesheet"/>
+    <link href="/static/{{ TethysAppName }}/css/plugins/glyphicons.css" rel="stylesheet"/>
+    <link href="/static/{{ TethysAppName }}/css/plugins/font-awesome.min.css" rel="stylesheet"/>
+    <link href="/static/{{ TethysAppName }}/css/plugins/jquery.toast.css" rel="stylesheet"/>
+    <link href="/static/{{ TethysAppName }}/css/plugins/threddsDataserverMinified.css" rel="stylesheet"/>
+    <link href="/static/{{ TethysAppName }}/css/plugins/layerUIWithSlider.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel='stylesheet' type='text/css'>
+    {% block LoadPluginCSSFiles %}
+
+    {% endblock %}
+    <link href="/static/{{ TethysAppName }}/css/templateStyle.css" rel="stylesheet"/>
+    {% block LoadCSSFiles %}
+
+    {% endblock %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9GR11YW59"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-C9GR11YW59');
+    </script>
+
+</head>
+<body class="full-height">
+<nav class="navbar navbar-light template-nabar">
+    <a class="navbar-brand" href="">National agricultural drought watch - {{ CountryName }}</a>
+    <div class="nav-logo-image">
+        <img class="logo-image-style" src="{{ navLogoImage }}" alt="">
+    </div>
+</nav>
+<div class="all-container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link {% block Current_nav_tabs %} {% endblock %}" id="Current-tab"
+               href="/apps/{{ TethysAppName }}/current/" role="tab" aria-controls="Current"
+               aria-selected="true">Current</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link {% block Seasonal_nav_tabs %}  {% endblock %}" id="seasonal-tab"
+               href="/apps/{{ TethysAppName }}/seasonal/" role="tab" aria-controls="seasonal"
+               aria-selected="false">Seasonal</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link {% block Outlook_nav_tabs %}  {% endblock %}" id="Outlook-tab"
+               href="/apps/{{ TethysAppName }}/outlook/" role="tab" aria-controls="Outlook"
+               aria-selected="false">Outlook</a>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade full-height full-width {% block Current_tabs_content %} {% endblock %}" id="Current"
+             role="tabpanel"
+             aria-labelledby="Current-tab">
+            {% block current_tab_body %}{% endblock %}
+        </div>
+        <div class="tab-pane fade full-height full-width {% block Seasonal_tabs_content %}  {% endblock %}"
+             id="seasonal" role="tabpanel"
+             aria-labelledby="seasonal-tab">{% block Seasonal_tab_body %}{% endblock %}
+        </div>
+        <div class="tab-pane fade full-height full-width {% block Outlook_tabs_content %}  {% endblock %}" id="Outlook"
+             role="tabpanel"
+             aria-labelledby="Outlook-tab">{% block Outlook_tab_body %}{% endblock %}
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">National agricultural drought watch
+                    - {{ CountryName }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="contributor" style="text-align: center;">
+                    <img src="/static/{{ TethysAppName }}/images/Horizontal_RGB_294.png" style="height:50px;"/>
+                    <img src="/static/{{ TethysAppName }}/images/NASA insigniaRGB.png" style="height:50px;"/>
+                    <img src="/static/{{ TethysAppName }}/images/ICIMOD Master logo_Blue.png" style="height:50px;"/>
+                    <img src="/static/{{ TethysAppName }}/images/Servir_HKH green.png" style="height:30px;"/>
+                </div>
+                <div>
+                    <p style="text-align:justify;font-size:12px;">
+                        ICIMOD is developing an integrated information platform linking weather and climate data with
+                        agriculture practices in the region. The platform provides data analysis support to
+                        professionals responsible for developing agro-met advisories for government agencies and
+                        farmers. The web-based service on the National agricultural drought watch for Nepal has been
+                        developed in collaboration with Ministry of Agriculture and Livestock Development and ICIMOD
+                        under the SERVIR Hindu Kush Himalaya (SERVIR-HKH) Initiative. It provides information on the
+                        in-season drought situation and outlook
+                    </p>
+                    <p style="text-align:justify;font-size:12px;">
+                        National agricultural drought watch System provides baselines on crop type maps and farming
+                        practices calendars valid at the district level, and multiple indices evapotranspiration,
+                        precipitation rate, standardized precipitation index, soil moisture, and temperature for
+                        droughts and seasonal weather outlooks at the national and regional levels. These can inform
+                        short- to medium-term agro-advisories. Users can already explore historical time-series data on
+                        the five indices over 18 years aggregated in decadal, monthly, and quarterly sets. The system
+                        provides 9 months forecast for various parameters.
+                    </p>
+
+                    <p style="text-align:justify;font-size:12px">
+                        <b>Acknowledgements:</b> Development of the Regional Drought Monitoring and Outlook System for
+                        South Asia and associated Agriculture Drought Watch System for {{ CountryName }} was supported
+                        by the United
+                        States Agency for International Development (USAID) and the National Aeronautics and Space
+                        Administration (NASA). The Climate Services for Resilient Development (CSRD) Initiative and the
+                        International Maize and Wheat Improvement Center (CIMMYT) also collaborated on the development
+                        of the system. The front-end application has been hosted on Amazon Web Services (AWS) the
+                        GEO-AWS Earth Observation Cloud Credits Programme.
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/{{ TethysAppName }}/js/plugins/jquery-3.3.1.min.js"></script>
+<script src="/static/{{ TethysAppName }}/js/plugins/bootstrap.bundle.min.js"></script>
+<script src="/static/{{ TethysAppName }}/js/plugins/bootstrap-slider.min.js"></script>
+<script src="/static/{{ TethysAppName }}/js/plugins/ol.js"></script>
+<script src="/static/{{ TethysAppName }}/js/plugins/ol-ext.js"></script>
+<script src="/static/{{ TethysAppName }}/js/plugins/iso8601.js"></script>
+<script src="/static/{{ TethysAppName }}/js/plugins/timeDimensionThreddsDataServer.js"></script>
+<script src="/static/{{ TethysAppName }}/js/plugins/jquery.toast.js"></script>
+
+
+<script type="text/javascript" src="/static/{{ TethysAppName }}/js/plugins/Highcharts/highcharts.js"></script>
+<script type="text/javascript" src="/static/{{ TethysAppName }}/js/plugins/Highcharts/highcharts-more.js"></script>
+<script type="text/javascript" src="/static/{{ TethysAppName }}/js/plugins/Highcharts/exporting.js"></script>
+<script type="text/javascript" src="/static/{{ TethysAppName }}/js/plugins/Highcharts/export-data.js"></script>
+
+
+<script>
+    let countryName = "{{ CountryName }}";
+    let defaultView ={{ defaultView |safe}};
+    let TethysAppName = "{{ TethysAppName}}";
+    let DefaultAdminLevel = "{{ AdminLevel }}";
+</script>
+
+<script src="/static/{{ TethysAppName }}/js/templeteScript.js"></script>
+<script src="/static/{{ TethysAppName }}/js/common_all.js"></script>
+
+{% block LoadScriptFiles %}
+
+{% endblock %}
+
+</body>
+</html>
